@@ -10,7 +10,6 @@ The game mechanics are very simple, the user is given 2 key controls to navigate
 
 
 Functionality & MVPs
-
 In paper planes game, users will be able to: 
 
 ~ Will create a loop that renders a continuos background moving down.
@@ -37,8 +36,7 @@ In addition, this project will include:
 
 
 Wireframes
-    Refer to images/screen shot to view the initial blueprint of what the website and game will look like 
-    for this project.
+Refer to images/screen shot to view the initial blueprint of what the website and game will look like for this project.
 
 ~ Game controlls include a play, settings, customize, and music buttons.
 
@@ -50,7 +48,8 @@ Wireframes
 
 
 Technologies, Libraries, APIs
-    ~ This project will implement the following technologies:
+This project will implement the following technologies:
+
 ~ The use of Canvas API for animation and view rendering
 
 ~ Webpack and Bael to bundle and transpile the JavaScript code
@@ -60,18 +59,18 @@ Technologies, Libraries, APIs
 
 
 Implementation Timeline
-    - The weekend
-        ~ Create a basic guideline on how to start and create my project. Research and gather on how to create video games on vanila dom. 
-          Refreshing up on the usage of canvas in terms of rendering the necessary animation for the project.
-    - Monday
-        ~ Focus on making the necessary controls and skeleton of the project, by implementing and creating all the necessary files and folders.
-          Strive to finish making all logic for the project to actually function properly. If able to, start the creation of the animation for 
-          the canvas api.
-    - Teusday
-        ~ Do some run up test to see if all logic function properly, then testing the rendering of the animation. See if there are any bugs that
-          occur from the combination of the animation and the actual code logic.
-    - Wednesday
-        ~ Finish up on all the remaining bugs and make sure the game functions properly with all the logic and animation functioning together
-          properly. When done with the debugging and tests, implement all the bonus features on the site such as instructions, music, social media, etc..
-    - Thursday Morning
-        ~ Full test before class, and submit all the progress made on the game. :D
+-The weekend
+~ Create a basic guideline on how to start and create my project. Research and gather on how to create video games on vanila dom. 
+  Refreshing up on the usage of canvas in terms of rendering the necessary animation for the project.
+-Monday
+~ Focus on making the necessary controls and skeleton of the project, by implementing and creating all the necessary files and folders.
+  Strive to finish making all logic for the project to actually function properly. If able to, start the creation of the animation for 
+  the canvas api.
+-Teusday
+~ Do some run up test to see if all logic function properly, then testing the rendering of the animation. See if there are any bugs that
+  occur from the combination of the animation and the actual code logic.
+-Wednesday
+~ Finish up on all the remaining bugs and make sure the game functions properly with all the logic and animation functioning together
+  properly. When done with the debugging and tests, implement all the bonus features on the site such as instructions, music, social media, etc..
+-Thursday Morning
+~ Full test before class, and submit all the progress made on the game. :D

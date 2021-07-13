@@ -23,14 +23,18 @@ body {
   width: 300px;
   height: 800px;
 }
+#button {
+  
+}
 
 #instructions-sidebar {
   border: thick double;
   border-color: white;
   width: 300px;
   height: 800px;
-  color: white;
+  color: whitesmoke;
   background-image: url(https://cdn.dribbble.com/users/1637239/screenshots/3810121/paper_plane.gif);
+  background-position: center;
 }
 
 #game {
@@ -45,22 +49,55 @@ body {
   width: 200px;
   height: 100px;
   position: relative;
-  top: 700px;
+  top: 400px;
   left: 200px;
   background-image: url(https://i.pinimg.com/originals/5c/0f/68/5c0f6834e0f766121ee18a619243debc.gif);
   background-size: 200px 150px;
+  border-radius: 50%;
 }
 
 #obstacle {
   width: 200px;
   height: 100px;
-  background-image: url(https://img.cloudygif.com/full/7db227b87d2a5540.gif);
+  background-image: url(https://i.pinimg.com/originals/8a/ea/04/8aea041f9d9ac2a4616a87f2884d0e51.gif);
   background-size: 200px 150px;
   position: relative;
   top: 1000px;
-  animation: slide 3s infinite;
+  animation: slide 6s infinite;
+  border-radius: 100%;
+}
+
+#obstacle2 {
+  width: 200px;
+  height: 100px;
+  background-image: url(https://img.cloudygif.com/full/7db227b87d2a5540.gif);
+  background-size: 100%;
+  position: relative;
+  top: 1100px;
+  animation: slide 7s infinite;
+  border-radius: 100%;
+}
+#obstacle3 {
+  width: 200px;
+  height: 100px;
+  background-image: url(https://i.pinimg.com/originals/8e/a3/f8/8ea3f820b1ef8cf4b04cecb098c43709.gif);
+  background-size: 200px 120px;
+  position: relative;
+  top: 1200px;
+  animation: slide 9s infinite;
+  border-radius: 100%;
+}
+#obstacle4 {
+  width: 200px;
+  height: 100px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj1XeuSJXyo1s_-7pGjUz8xAD3qPhivky33dDxayoNWwK2-cFksGvCNIJaiVuMnRpDkEg&usqp=CAU);
+  background-size: 200px 115px;
+  position: relative;
+  top: 1300px;
+  animation: slide 15s infinite;
+  border-radius: 90%;
 }
 
 @keyframes slide {
-  0% {top:-100px};
+  0% {top:-450px};
 }

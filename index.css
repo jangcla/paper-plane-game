@@ -23,8 +23,12 @@ body {
   width: 300px;
   height: 800px;
 }
-#button {
-  
+#play-button {
+  padding: 1%;
+  background-color: white;
+  width: 60px;
+  height: 52px;
+  margin-top: 5px;
 }
 
 #instructions-sidebar {
@@ -74,6 +78,7 @@ body {
   background-size: 100%;
   position: relative;
   top: 1100px;
+  left: 400px;
   animation: slide 7s infinite;
   border-radius: 100%;
 }
@@ -84,6 +89,7 @@ body {
   background-size: 200px 120px;
   position: relative;
   top: 1200px;
+  left: 400px;
   animation: slide 9s infinite;
   border-radius: 100%;
 }
@@ -101,3 +107,4 @@ body {
 @keyframes slide {
   0% {top:-450px};
 }
+

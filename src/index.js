@@ -1,3 +1,20 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyAzIj8yUZ6HsVI4Ip1GO95REzzuLW_sBwA",
+    authDomain: "score-board-9a8a9.firebaseapp.com",
+    projectId: "score-board-9a8a9",
+    storageBucket: "score-board-9a8a9.appspot.com",
+    messagingSenderId: "1018757918132",
+    appId: "1:1018757918132:web:f38d149043efbc98a496e1",
+    measurementId: "G-1H7KM54G4J"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+let db = firebase.firestore();
+
+
+
+
 function moveLeft() {
     let left = parseInt(window.getComputedStyle(paperplane).getPropertyValue("left"));
     left -= 200;
@@ -61,7 +78,7 @@ setInterval(function() {
     var onTop4 = parseInt(window.getComputedStyle(obs[3]).getPropertyValue("top"));
 
     if (paperPlaneLeft === obstacleLeft && onTop < 900 && onTop > 700) {
-        alert(`Game Over... ${counter} dodged`);
+        alert(`Game Over... ${counter} DODGED ...to replay press the play button.`);
         counter = 0;
         obstacle.style.animation = "none"
         obstacle2.style.animation = "none"
@@ -69,7 +86,7 @@ setInterval(function() {
         obstacle4.style.animation = "none"
     }
     else if (paperPlaneLeft === obstacleLeft2 && onTop2 < 800 && onTop2 > 600) {
-        alert(`Game Over... ${counter} dodged`);
+        alert(`Game Over... ${counter} DODGED ...to replay press the play button.`);
         counter = 0;
         obstacle.style.animation = "none"
         obstacle2.style.animation = "none"
@@ -77,7 +94,7 @@ setInterval(function() {
         obstacle4.style.animation = "none"
     }
     else if (paperPlaneLeft === obstacleLeft3 && onTop3 < 700 && onTop3 > 500) {
-        alert(`Game Over... ${counter} dodged`);
+        alert(`Game Over... ${counter} DODGED ...to replay press the play button.`);
         counter = 0;
         obstacle.style.animation = "none"
         obstacle2.style.animation = "none"
@@ -85,7 +102,7 @@ setInterval(function() {
         obstacle4.style.animation = "none"
     }
     else if (paperPlaneLeft === obstacleLeft4 && onTop4 < 600 && onTop4 > 400) {
-        alert(`Game Over... ${counter} dodged`);
+        alert(`Game Over... ${counter} DODGED ...to replay press the play button.`);
         counter = 0;
         obstacle.style.animation = "none"
         obstacle2.style.animation = "none"

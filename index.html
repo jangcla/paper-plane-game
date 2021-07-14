@@ -14,9 +14,19 @@
 			
 			<div id='buttons-sidebar'>
 				<div id="play-button">
-					<button><img src="https://miro.medium.com/freeze/max/768/1*IDJ4x4E-bOypnEZdA5TGHQ.gif" width="40"><a href="javascript:location.reload();">Take Off!</a></button>
+					<button><a href="javascript:location.reload();"><img src="https://miro.medium.com/freeze/max/768/1*IDJ4x4E-bOypnEZdA5TGHQ.gif" width="40"></a></button>
 				</div>
 				
+				<div id="score-board">
+						<h2>Scoreboard</h2>
+						<!-- Display our Scoreboard here -->
+						<table id="scoreboard">
+							<tr>
+								<th>Name</th>
+								<th>Score</th>
+							</tr>
+						</table>
+				</div>
 			</div>
 			
 			<div id="game">
@@ -28,18 +38,43 @@
 			</div>
 			
 			<div id="instructions-sidebar">
-				<h3>Instructions</h3>
-				<p id="instructions"> Move left and right using either the arrow key controls or the a & d letter keys. three lanes are available for you to
-					use, survive as long as you can.</p>
-					
-					
-					<h3>Introduction</h3>
-					<p id="introduction">
-						Dodge as many obstacles as you can! Prove to the world that your flying skills are unmatched and beat anybody else on
-						the leaderboard that says they're better than you.</p>
+					<div id="controls">
+						<h3>Controls</h3>
+						<img src="https://www.nicepng.com/png/detail/128-1287679_arrow-top-up-key-comments-server.png"  width="40px" id="larrow">
+						<img src="https://www.nicepng.com/png/detail/128-1287679_arrow-top-up-key-comments-server.png"  width="40px" id="rarrow">
+						
+						<h4>Arrow Keys</h4>
+
 					</div>
-				</div>
+
+					<div id="intros">
+						<h3>Instructions</h3>
+						<p id="instructions"> Move left and right using either the arrow key controls or the a & d letter keys. three lanes are available for you to
+						use, survive as long as you can.</p>
+
+						
+
+					</div>
+					
+					<div id="introd">
+						<h3>Introduction</h3>
+						<p id="introduction">
+							Dodge as many obstacles as you can! Prove to the world that your flying skills are unmatched and beat anybody else on
+							the leaderboard that says they're better than you.</p>
+					</div>
+			</div>
+		</div>
 				
-			</body>
-			<script src="src/index.js"></script>
-			</html>
+
+
+
+
+
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+		<!-- Import Firestore -->
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+		<!-- Import our JavaScript file -->
+		<script src="src/index.js"></script>
+	</body>
+	</html>

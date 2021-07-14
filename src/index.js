@@ -134,7 +134,7 @@ function saveScore() {
         // Add a new document in collection "scores"
         db.collection("scores").doc().set({
             name: name,
-            score: counter + " DODGED"
+            score: counter 
         })
             .then(function () {
                 console.log("Document successfully written!");

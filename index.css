@@ -16,7 +16,9 @@ body {
 }
 
 #buttons-sidebar {
-  
+  background-image: url(https://media3.giphy.com/media/5UpRHBPI9x3ruDo35B/giphy.gif);
+  background-size: cover;
+  background-position: center;
   border: solid white;
 
   width: 300px;
@@ -26,10 +28,11 @@ body {
 #score-board {
   margin-top: 10%;
   margin-left: 7px;
-  border: solid white;
+  border: solid black;
   width: 280px;
-  color: white;
+  color: black;
   text-align: center;
+  border-radius: 10px;
 }
 
 
@@ -138,7 +141,7 @@ body {
 }
 
 #introd {
-  margin-top: 400px;
+  margin-top: 220px;
 }
 
 #intros {
@@ -157,4 +160,57 @@ body {
   background: white;
   border-radius: 10px;
   transform: rotate(90deg);
+}
+
+#akey {
+  padding: 2px;
+  background: white;
+  border-radius: 5px;
+}
+#dkey {
+  margin-left: 20px;
+  padding: 2px;
+  background: white;
+  border-radius: 5px;
+}
+
+h4 {
+  padding-bottom: 5px;
+}
+
+#media {
+  margin-top: 100px;
+  width: 135px;
+  border: solid;
+  padding: 10px;
+  margin-left: 25%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+#media button{
+  background: transparent;
+  border: transparent;
+  border-radius: 25px;
+}
+
+#edit-plane {
+  margin-left: 100px;
+  width: 88px;
+  background: transparent;
+  border-radius: 25%;
+  padding-left: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#settings-plane{
+  margin-left: 100px;
+  width: 78px;
+  background: transparent;
+  border-radius: 25%;
+  padding-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

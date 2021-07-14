@@ -78,7 +78,8 @@ setInterval(function() {
     var onTop4 = parseInt(window.getComputedStyle(obs[3]).getPropertyValue("top"));
 
     if (paperPlaneLeft === obstacleLeft && onTop < 900 && onTop > 700) {
-        alert(`Game Over... ${counter} DODGED ...to replay press the play button.`);
+        alert(`Game Over... ${counter} DODGED `);
+        saveScore();
         counter = 0;
         obstacle.style.animation = "none"
         obstacle2.style.animation = "none"
@@ -86,7 +87,8 @@ setInterval(function() {
         obstacle4.style.animation = "none"
     }
     else if (paperPlaneLeft === obstacleLeft2 && onTop2 < 800 && onTop2 > 600) {
-        alert(`Game Over... ${counter} DODGED ...to replay press the play button.`);
+        alert(`Game Over... ${counter} DODGED `);
+        saveScore();
         counter = 0;
         obstacle.style.animation = "none"
         obstacle2.style.animation = "none"
@@ -94,7 +96,8 @@ setInterval(function() {
         obstacle4.style.animation = "none"
     }
     else if (paperPlaneLeft === obstacleLeft3 && onTop3 < 700 && onTop3 > 500) {
-        alert(`Game Over... ${counter} DODGED ...to replay press the play button.`);
+        alert(`Game Over... ${counter} DODGED `);
+        saveScore();
         counter = 0;
         obstacle.style.animation = "none"
         obstacle2.style.animation = "none"
@@ -102,7 +105,8 @@ setInterval(function() {
         obstacle4.style.animation = "none"
     }
     else if (paperPlaneLeft === obstacleLeft4 && onTop4 < 600 && onTop4 > 400) {
-        alert(`Game Over... ${counter} DODGED ...to replay press the play button.`);
+        alert(`Game Over... ${counter} DODGED `);
+        saveScore();
         counter = 0;
         obstacle.style.animation = "none"
         obstacle2.style.animation = "none"
@@ -110,3 +114,64 @@ setInterval(function() {
         obstacle4.style.animation = "none"
     }
 }, 1)
+
+
+
+function reload() {
+    var container = document.getElementById("main-container");
+    var content = container.innerHTML;
+    container.innerHTML = content;
+}
+
+
+
+function saveScore() {
+    // Get name from input box
+    let name = prompt("Pilot...What is your name?", "Pilot Name");
+
+    // Make sure name has a value, if not send alert.
+    if (name !== null) {
+        // Add a new document in collection "scores"
+        db.collection("scores").doc().set({
+            name: name,
+            score: counter + " DODGED"
+        })
+            .then(function () {
+                console.log("Document successfully written!");
+                updateScores();
+            })
+            .catch(function (error) {
+                console.error("Error writing document: ", error);
+            });
+    } else {
+        let name = prompt('Please enter a name');
+        db.collection("scores").doc().set({
+            name: name,
+            score: counter + " DODGED"
+        })
+            .then(function () {
+                console.log("Document successfully written!");
+                updateScores();
+            })
+            .catch(function (error) {
+                console.error("Error writing document: ", error);
+            });
+    }
+}
+
+function updateScores() {
+    // Clear current scores in our scoreboard
+    document.getElementById('scoreboard').innerHTML = '<tr><th>Name</th><th>Score</th></tr>';
+
+    // Get the top 5 scores from our scoreboard
+    db.collection("scores").orderBy("score", "desc").limit(10).get().then((snapshot) => {
+        snapshot.forEach((doc) => {
+            document.getElementById('scoreboard').innerHTML += '<tr>' +
+                '<td>' + doc.data().name + '</td>' +
+                '<td>' + doc.data().score + '</td>' +
+                '</tr>';
+        })
+    })
+}
+
+window.onload = updateScores();

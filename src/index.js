@@ -143,19 +143,6 @@ function saveScore() {
             .catch(function (error) {
                 console.error("Error writing document: ", error);
             });
-    } else {
-        let name = prompt('Please enter a name');
-        db.collection("scores").doc().set({
-            name: name,
-            score: counter + " DODGED"
-        })
-            .then(function () {
-                console.log("Document successfully written!");
-                updateScores();
-            })
-            .catch(function (error) {
-                console.error("Error writing document: ", error);
-            });
     }
 }
 

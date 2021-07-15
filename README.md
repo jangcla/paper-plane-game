@@ -37,7 +37,7 @@ The game mechanics are very simple, the user is given 2 key controls to navigate
 
 ## Wireframes
 ![wireframe image](./images/wireframe.png)
-### Please refer to images/screen shot to view the initial blueprint of what the website and game will look like for this project.
+### Please refer to image above for the initial blueprint of what the website and game will look like for this project.
 
 * ~ Game controlls include a play, settings, customize, and music buttons.
 

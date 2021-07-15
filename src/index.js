@@ -125,13 +125,11 @@ function reload() {
 
 
 
+
 function saveScore() {
-    // Get name from input box
     let name = prompt("Pilot...What is your name?", "Pilot Name");
 
-    // Make sure name has a value, if not send alert.
     if (name !== null) {
-        // Add a new document in collection "scores"
         db.collection("scores").doc().set({
             name: name,
             score: counter 
@@ -146,10 +144,8 @@ function saveScore() {
 }
 
 function updateScores() {
-    // Clear current scores in our scoreboard
     document.getElementById('scoreboard').innerHTML = '<tr><th>Name</th><th>Score</th></tr>';
 
-    // Get the top 5 scores from our scoreboard
     db.collection("scores").orderBy("score", "desc").limit(10).get().then((snapshot) => {
         snapshot.forEach((doc) => {
             document.getElementById('scoreboard').innerHTML += '<tr>' +
@@ -160,4 +156,11 @@ function updateScores() {
     })
 }
 
+
+function closeHelpDiv() {
+    document.getElementById("cover").style.display = " none";
+}
+
+
+window.setTimeout("closeHelpDiv();", 6500);
 window.onload = updateScores();

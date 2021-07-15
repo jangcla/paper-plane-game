@@ -137,7 +137,6 @@ function saveScore() {
             score: counter 
         })
             .then(function () {
-                console.log("Document successfully written!");
                 updateScores();
             })
             .catch(function (error) {

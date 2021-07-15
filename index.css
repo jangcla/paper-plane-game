@@ -19,7 +19,7 @@ body {
   background-image: url(https://media3.giphy.com/media/5UpRHBPI9x3ruDo35B/giphy.gif);
   background-size: cover;
   background-position: center;
-  border: solid white;
+  border: thick double white;
   width: 300px;
   height: 800px;
 }

@@ -31,8 +31,8 @@ function moveRight() {
 }
 
 document.addEventListener("keydown", event => {
-    if (event.key === "ArrowLeft" || event.key === "a") {moveLeft();}
-    if (event.key === "ArrowRight"|| event.key === "d") {moveRight();}
+    if (event.key === "ArrowLeft" || event.key === "a" || event.key === "A") {moveLeft();}
+    if (event.key === "ArrowRight"|| event.key === "d" || event.key === "D") {moveRight();}
 })
 
 let counter = 0

@@ -257,3 +257,15 @@ button.onclick = function() {
         obstacle.style.animation = "slide 6s infinite";
     }, 5000);
 }
+
+let changePlane = document.getElementById("plane-change");
+
+changePlane.onclick = function() {
+    let planeArr = ['url(https://media2.giphy.com/media/S9ukg9TDGpMDxHKqGI/giphy.gif)', 'url(https://cdn.dribbble.com/users/2113762/screenshots/4207808/layer-1-paperflight-3.gif)', 'url(https://media.giphy.com/media/26xBBWHMhvoAkndhC/giphy.gif)', 'url(https://www.grc.nasa.gov/www/k-12/airplane/Images/pplanes.gif)', 'url(https://i.pinimg.com/originals/bf/72/56/bf7256a96df56f720ef60b05e7dd09ac.gif)', 'url(https://cdn.dribbble.com/users/1912193/screenshots/4753129/airplane-gif_dribbble_.gif)', 'url(https://data.whicdn.com/images/63516206/original.gif)', 'url(https://monophy.com/media/KzAaUM0ftgkoZuP6b1/monophy.gif)', 'url(https://i.pinimg.com/originals/29/38/a3/2938a3b0772876c56082d65731c23692.gif)', 'url(https://media0.giphy.com/media/cTbVbxI1A5ulEQxRjs/giphy.gif?cid=6c09b952ffb7cb6b3c516a5ed80a2521ecf32839a02121c8&rid=giphy.gif&ct=s)', 'url(https://i.pinimg.com/originals/13/fa/be/13fabe368d08211706da14d461727b50.gif)', 'url(https://paper-planes.in/images/only-plane.gif)']
+    
+    let randomIndex = Math.floor(Math.random() * planeArr.length)
+    
+    
+    document.getElementById("paperplane").style.background = planeArr[randomIndex];
+    document.getElementById("paperplane").style.backgroundSize = "100% 100%";
+}

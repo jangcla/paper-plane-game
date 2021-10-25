@@ -65,55 +65,58 @@ obstacle4.addEventListener('animationiteration', () => {
     counter++;
 })
 
-setInterval(function() {
-    let obs = [obstacle, obstacle2, obstacle3, obstacle4]
-    var paperPlaneLeft = parseInt(window.getComputedStyle(paperplane).getPropertyValue("left"));
-    var obstacleLeft = parseInt(window.getComputedStyle(obs[0]).getPropertyValue("left"));
-    var obstacleLeft2 = parseInt(window.getComputedStyle(obs[1]).getPropertyValue("left"));
-    var obstacleLeft3 = parseInt(window.getComputedStyle(obs[2]).getPropertyValue("left"));
-    var obstacleLeft4 = parseInt(window.getComputedStyle(obs[3]).getPropertyValue("left"));
-    var onTop = parseInt(window.getComputedStyle(obs[0]).getPropertyValue("top"));
-    var onTop2 = parseInt(window.getComputedStyle(obs[1]).getPropertyValue("top"));
-    var onTop3 = parseInt(window.getComputedStyle(obs[2]).getPropertyValue("top"));
-    var onTop4 = parseInt(window.getComputedStyle(obs[3]).getPropertyValue("top"));
+setInterval(() => {
+    setInterval(function() {
+        let obs = [obstacle, obstacle2, obstacle3, obstacle4]
+        var paperPlaneLeft = parseInt(window.getComputedStyle(paperplane).getPropertyValue("left"));
+        var obstacleLeft = parseInt(window.getComputedStyle(obs[0]).getPropertyValue("left"));
+        var obstacleLeft2 = parseInt(window.getComputedStyle(obs[1]).getPropertyValue("left"));
+        var obstacleLeft3 = parseInt(window.getComputedStyle(obs[2]).getPropertyValue("left"));
+        var obstacleLeft4 = parseInt(window.getComputedStyle(obs[3]).getPropertyValue("left"));
+        var onTop = parseInt(window.getComputedStyle(obs[0]).getPropertyValue("top"));
+        var onTop2 = parseInt(window.getComputedStyle(obs[1]).getPropertyValue("top"));
+        var onTop3 = parseInt(window.getComputedStyle(obs[2]).getPropertyValue("top"));
+        var onTop4 = parseInt(window.getComputedStyle(obs[3]).getPropertyValue("top"));
 
-    if (paperPlaneLeft === obstacleLeft && onTop < 900 && onTop > 700) {
-        alert(`Game Over... ${counter} DODGED `);
-        saveScore();
-        counter = 0;
-        obstacle.style.animation = "none"
-        obstacle2.style.animation = "none"
-        obstacle3.style.animation = "none"
-        obstacle4.style.animation = "none"
-    }
-    else if (paperPlaneLeft === obstacleLeft2 && onTop2 < 800 && onTop2 > 600) {
-        alert(`Game Over... ${counter} DODGED `);
-        saveScore();
-        counter = 0;
-        obstacle.style.animation = "none"
-        obstacle2.style.animation = "none"
-        obstacle3.style.animation = "none"
-        obstacle4.style.animation = "none"
-    }
-    else if (paperPlaneLeft === obstacleLeft3 && onTop3 < 700 && onTop3 > 500) {
-        alert(`Game Over... ${counter} DODGED `);
-        saveScore();
-        counter = 0;
-        obstacle.style.animation = "none"
-        obstacle2.style.animation = "none"
-        obstacle3.style.animation = "none"
-        obstacle4.style.animation = "none"
-    }
-    else if (paperPlaneLeft === obstacleLeft4 && onTop4 < 600 && onTop4 > 400) {
-        alert(`Game Over... ${counter} DODGED `);
-        saveScore();
-        counter = 0;
-        obstacle.style.animation = "none"
-        obstacle2.style.animation = "none"
-        obstacle3.style.animation = "none"
-        obstacle4.style.animation = "none"
-    }
-}, 1)
+        if (paperPlaneLeft === obstacleLeft && onTop < 900 && onTop > 700) {
+            alert(`Game Over... ${counter} DODGED `);
+            saveScore();
+            counter = 0;
+            obstacle.style.animation = "none"
+            obstacle2.style.animation = "none"
+            obstacle3.style.animation = "none"
+            obstacle4.style.animation = "none"
+        }
+        else if (paperPlaneLeft === obstacleLeft2 && onTop2 < 800 && onTop2 > 600) {
+            alert(`Game Over... ${counter} DODGED `);
+            saveScore();
+            counter = 0;
+            obstacle.style.animation = "none"
+            obstacle2.style.animation = "none"
+            obstacle3.style.animation = "none"
+            obstacle4.style.animation = "none"
+        }
+        else if (paperPlaneLeft === obstacleLeft3 && onTop3 < 700 && onTop3 > 500) {
+            alert(`Game Over... ${counter} DODGED `);
+            saveScore();
+            counter = 0;
+            obstacle.style.animation = "none"
+            obstacle2.style.animation = "none"
+            obstacle3.style.animation = "none"
+            obstacle4.style.animation = "none"
+        }
+        else if (paperPlaneLeft === obstacleLeft4 && onTop4 < 600 && onTop4 > 400) {
+            alert(`Game Over... ${counter} DODGED `);
+            saveScore();
+            counter = 0;
+            obstacle.style.animation = "none"
+            obstacle2.style.animation = "none"
+            obstacle3.style.animation = "none"
+            obstacle4.style.animation = "none"
+        }
+    }, 0.1)
+}, 6)
+    
 
 
 
@@ -160,6 +163,8 @@ function updateScores() {
 function closeHelpDiv() {
     document.getElementById("cover").style.display = " none";
 }
+
+
 
 
 window.setTimeout("closeHelpDiv();", 6500);

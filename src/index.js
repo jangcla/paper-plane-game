@@ -36,14 +36,29 @@ document.addEventListener("keydown", event => {
 })
 
 let counter = 0
+let counterShow = document.getElementById("counter")
+
 let obstacle = document.getElementById("obstacle");
 obstacle.addEventListener('animationiteration', () => {
     var random = Math.floor(Math.random() * 3);
     left = random * 200;  
     obstacle.style.left = left + "px";
     counter++;
+    document.getElementById('counter').innerHTML = counter;
     if (counter === 5) {
         obstacle2.style.animation = "slide 6s infinite";
+        document.getElementById('counter').style.color = 'red'
+    }
+    if (counter === 15) {
+        obstacle3.style.animation = "slide 12s infinite";
+        document.getElementById('counter').style.color = 'yellow'
+    }
+    if (counter === 30) {
+        obstacle4.style.animation = "slide 18s infinite";
+        document.getElementById('counter').style.color = 'green'
+    }
+    if (counter > 45) {
+        document.getElementById('counter').style.color = 'lightskyblue'
     }
 })
 let obstacle2 = document.getElementById("obstacle2");
@@ -52,8 +67,22 @@ obstacle2.addEventListener('animationiteration', () => {
     left = random * 200;  
     obstacle2.style.left = left + "px";
     counter++;
-    if (counter === 10) {
-        obstacle3.style.animation = "slide 6s infinite";
+    document.getElementById('counter').innerHTML = counter;
+
+    if (counter === 5) {
+        obstacle2.style.animation = "slide 6s infinite";
+        document.getElementById('counter').style.color = 'red'
+    }
+    if (counter === 15) {
+        obstacle3.style.animation = "slide 12s infinite";
+        document.getElementById('counter').style.color = 'yellow'
+    }
+    if (counter === 30) {
+        obstacle4.style.animation = "slide 18s infinite";
+        document.getElementById('counter').style.color = 'green'
+    }
+    if (counter > 45) {
+        document.getElementById('counter').style.color = 'lightskyblue'
     }
 })
 let obstacle3 = document.getElementById("obstacle3");
@@ -62,8 +91,22 @@ obstacle3.addEventListener('animationiteration', () => {
     left = random * 200;  
     obstacle3.style.left = left + "px";
     counter++;
-    if (counter === 25) {
-        obstacle4.style.animation = "slide 6s infinite";
+    document.getElementById('counter').innerHTML = counter;
+
+    if (counter === 5) {
+        obstacle2.style.animation = "slide 6s infinite";
+        document.getElementById('counter').style.color = 'red'
+    }
+    if (counter === 15) {
+        obstacle3.style.animation = "slide 12s infinite";
+        document.getElementById('counter').style.color = 'yellow'
+    }
+    if (counter === 30) {
+        obstacle4.style.animation = "slide 18s infinite";
+        document.getElementById('counter').style.color = 'green'
+    }
+    if (counter > 45) {
+        document.getElementById('counter').style.color = 'lightskyblue'
     }
 })
 let obstacle4 = document.getElementById("obstacle4");
@@ -72,6 +115,23 @@ obstacle4.addEventListener('animationiteration', () => {
     left = random * 200;  
     obstacle4.style.left = left + "px";
     counter++;
+    document.getElementById('counter').innerHTML = counter;
+    
+    if (counter === 5) {
+        obstacle2.style.animation = "slide 6s infinite";
+        document.getElementById('counter').style.color = 'red'
+    }
+    if (counter === 15) {
+        obstacle3.style.animation = "slide 12s infinite";
+        document.getElementById('counter').style.color = 'yellow'
+    }
+    if (counter === 30) {
+        obstacle4.style.animation = "slide 18s infinite";
+        document.getElementById('counter').style.color = 'green'
+    }
+    if (counter > 45) {
+        document.getElementById('counter').style.color = 'lightskyblue'
+    }
 })
 
 setInterval(function() {
@@ -178,3 +238,6 @@ function loadingDiv() {
 
 window.setTimeout("loadingDiv();", 5000);
 window.onload = updateScores();
+window.onload = function () {
+    document.getElementById('counter').innerHTML = counter;
+};

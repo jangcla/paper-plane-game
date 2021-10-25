@@ -48,7 +48,7 @@ body {
 }
 
 #score-board {
-    margin-top: 90%;
+    margin-top: 50%;
     border: solid white;
     width: 280px;
     color: white;
@@ -166,7 +166,7 @@ th {
   background-size: 100%;
   position: relative;
   top: 1100px;
-  animation: none 6s infinite;
+  animation: none 9s infinite;
   border-radius: 100%;
 }
 #obstacle3 {
@@ -177,7 +177,7 @@ th {
   position: relative;
   top: 1200px;
   left: 400px;
-  animation: none 6s infinite;
+  animation: none 12s infinite;
   border-radius: 100%;
 }
 
@@ -188,7 +188,7 @@ th {
   background-size: 200px 115px;
   position: relative;
   top: 1300px;
-  animation: none 6s infinite;
+  animation: none 15s infinite;
   border-radius: 90%;
 } 
 
@@ -342,3 +342,27 @@ h4 {
 #introduction {
   padding: 23px;
 }
+
+#counter-div {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#counter{
+    color: black;
+    background: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    box-shadow: 0px 0px 20px 20px white;
+    fill: white;
+    text-align: center;
+    border-radius: 50px;
+    width: 115px;
+}
+
+#score-title {
+  color: #6ebde6;
+    margin-top: -10px;
+  }

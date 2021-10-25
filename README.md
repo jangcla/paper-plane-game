@@ -18,7 +18,7 @@ The game mechanics are very simple, the user is given 2 key controls to navigate
 
 *  ~ Develope a method that moves the player left and right allowing to change to the three different lanes.
   
-*  ~ Allow for a progressing background change as the longer the player plays the game. 
+*  ~ A button to change the players paper plane at random. 
 
 
 ### In addition, this project will include:

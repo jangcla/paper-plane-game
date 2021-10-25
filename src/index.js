@@ -241,3 +241,19 @@ window.onload = updateScores();
 window.onload = function () {
     document.getElementById('counter').innerHTML = counter;
 };
+
+
+let button = document.getElementById("reset-game");
+
+button.onclick = function() {
+    counter = 0;
+    document.getElementById('counter').innerHTML = counter;
+    document.getElementById("counter").style.color = "black";
+    document.getElementById("cover").style.display = "block";
+    document.getElementById("paperplane").style.left = '200px';
+
+    setTimeout(function () {
+        document.getElementById("cover").style.display = "none";
+        obstacle.style.animation = "slide 6s infinite";
+    }, 5000);
+}

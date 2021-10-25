@@ -155,19 +155,18 @@ th {
   background-size: 200px 150px;
   position: relative;
   top: 1000px;
-  animation: slide 6s infinite;
+  animation: none 6s infinite;
   border-radius: 100%;
 }
 
 #obstacle2 {
   width: 200px;
   height: 100px;
-  background-image: url(https://img.cloudygif.com/full/7db227b87d2a5540.gif);
+  background-image: url(https://media2.giphy.com/media/2nwOVFoq4NoI/giphy.gif);
   background-size: 100%;
   position: relative;
   top: 1100px;
-  left: 400px;
-  animation: slide 7s infinite;
+  animation: none 6s infinite;
   border-radius: 100%;
 }
 #obstacle3 {
@@ -178,9 +177,10 @@ th {
   position: relative;
   top: 1200px;
   left: 400px;
-  animation: slide 9s infinite;
+  animation: none 6s infinite;
   border-radius: 100%;
 }
+
 #obstacle4 {
   width: 200px;
   height: 100px;
@@ -188,9 +188,9 @@ th {
   background-size: 200px 115px;
   position: relative;
   top: 1300px;
-  animation: slide 15s infinite;
+  animation: none 6s infinite;
   border-radius: 90%;
-}
+} 
 
 @keyframes slide {
   0% {top:-450px};

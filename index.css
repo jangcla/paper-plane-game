@@ -365,5 +365,9 @@ h4 {
 
 #score-title {
   color: #6ebde6;
-    margin-top: -10px;
+  margin-top: -10px;
   }
+
+#score-title:hover {
+  color: white;
+}

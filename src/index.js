@@ -36,9 +36,17 @@ document.addEventListener("keydown", event => {
     if (event.key === "ArrowRight"|| event.key === "d" || event.key === "D") {moveRight();}
 })
 
+
+
+// This portion is to initialize a counter and a live show counter 
 let counter = 0
 let counterShow = document.getElementById("counter")
 
+
+
+// This portion focuses on the creation of the multiple randomly generated obstacles
+// This portion also includes the use of the counter to increase the amount of obstacles over time
+// The bonus feature in this part also changes the color of the shown live score as the player progresses over time
 let obstacle = document.getElementById("obstacle");
 obstacle.addEventListener('animationiteration', () => {
     var random = Math.floor(Math.random() * 3);

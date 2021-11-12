@@ -143,6 +143,10 @@ obstacle4.addEventListener('animationiteration', () => {
     }
 })
 
+
+
+// This portion of the code is to create the collision function
+// Made so that when a collision with an obstacle is detected it will create an alert that then saves user score
 setInterval(function() {
     let obs = [obstacle, obstacle2, obstacle3, obstacle4]
     var paperPlaneLeft = parseInt(window.getComputedStyle(paperplane).getPropertyValue("left"));
@@ -195,12 +199,13 @@ setInterval(function() {
 
 
 
-
-function reload() {
-    var container = document.getElementById("main-container");
-    var content = container.innerHTML;
-    container.innerHTML = content;
-}
+// This was the initial code I used to create a function to reset the game after losing
+// The code has no more uses as I created a better replay method 
+// function reload() {
+//     var container = document.getElementById("main-container");
+//     var content = container.innerHTML;
+//     container.innerHTML = content;
+// }
 
 
 

@@ -209,7 +209,8 @@ setInterval(function() {
 
 
 
-
+// This is the method used to upload and halt the game as a collision is detected
+// Also includes the helper method to update the score on the active firebase scoreboard
 function saveScore() {
     let name = prompt("Pilot...What is your name?", "Pilot Name");
 
@@ -242,6 +243,7 @@ function updateScores() {
 
 
 
+// The initial loading screen when first loading the website
 function loadingDiv() {
     document.getElementById("cover").style.display = "none";
     obstacle.style.animation = "slide 6s infinite";
@@ -249,7 +251,7 @@ function loadingDiv() {
 
 
 
-
+// These three code initializes what happens as the window is loaded
 window.setTimeout("loadingDiv();", 5000);
 window.onload = updateScores();
 window.onload = function () {
@@ -257,8 +259,9 @@ window.onload = function () {
 };
 
 
-let button = document.getElementById("reset-game");
 
+// These set of code are the new improved replay button method that allows the game to restart without reloading the whole site
+let button = document.getElementById("reset-game");
 button.onclick = function() {
     counter = 0;
     document.getElementById('counter').innerHTML = counter;
@@ -272,8 +275,10 @@ button.onclick = function() {
     }, 5000);
 }
 
-let changePlane = document.getElementById("plane-change");
 
+
+// These next set of code are the method to randomly change the playable paper plane to a diffirent gif when clicked
+let changePlane = document.getElementById("plane-change");
 changePlane.onclick = function() {
     let planeArr = ['url(https://media2.giphy.com/media/S9ukg9TDGpMDxHKqGI/giphy.gif)', 'url(https://cdn.dribbble.com/users/2113762/screenshots/4207808/layer-1-paperflight-3.gif)', 'url(https://media.giphy.com/media/26xBBWHMhvoAkndhC/giphy.gif)', 'url(https://www.grc.nasa.gov/www/k-12/airplane/Images/pplanes.gif)', 'url(https://i.pinimg.com/originals/bf/72/56/bf7256a96df56f720ef60b05e7dd09ac.gif)', 'url(https://cdn.dribbble.com/users/1912193/screenshots/4753129/airplane-gif_dribbble_.gif)', 'url(https://data.whicdn.com/images/63516206/original.gif)', 'url(https://monophy.com/media/KzAaUM0ftgkoZuP6b1/monophy.gif)', 'url(https://i.pinimg.com/originals/29/38/a3/2938a3b0772876c56082d65731c23692.gif)', 'url(https://media0.giphy.com/media/cTbVbxI1A5ulEQxRjs/giphy.gif?cid=6c09b952ffb7cb6b3c516a5ed80a2521ecf32839a02121c8&rid=giphy.gif&ct=s)', 'url(https://i.pinimg.com/originals/13/fa/be/13fabe368d08211706da14d461727b50.gif)', 'url(https://paper-planes.in/images/only-plane.gif)']
     

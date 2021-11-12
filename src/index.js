@@ -1,3 +1,4 @@
+// This portion is initializing the firebase online storage for the active score board
 var firebaseConfig = {
     apiKey: "AIzaSyAzIj8yUZ6HsVI4Ip1GO95REzzuLW_sBwA",
     authDomain: "score-board-9a8a9.firebaseapp.com",
@@ -14,7 +15,7 @@ let db = firebase.firestore();
 
 
 
-
+// This portion is to create the playable airplane movements
 function moveLeft() {
     let left = parseInt(window.getComputedStyle(paperplane).getPropertyValue("left"));
     left -= 200;

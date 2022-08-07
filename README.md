@@ -1,5 +1,5 @@
 # Paper Plane Game
-[Play paper plane](https://jangcla.github.io/paper-plane-game/)
+### [Play paper plane](https://jangcla.github.io/paper-plane-game/)
 
 ## The first attempt at creating my first video game.
 
